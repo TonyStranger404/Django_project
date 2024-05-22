@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{% url 'index' %}">Домашняя страница</a></li>
+          <li><a href="{% url 'calorie_counter' %}">Расчет калорий</a></li>
+          <li><a href="{% url 'about' %}">О проекте</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer>
+      <p>&copy; Рассчет калорий</p>
+    </footer>
+  </body>
+</html>
